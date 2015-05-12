@@ -1,0 +1,8 @@
+.idea
+*.iml
+target/
+log.dir_IS_UNDEFINED
+atlassian-ide-plugin.xml
+*.versionsBackup
+**/*.versionsBackup
+.DS_Store
