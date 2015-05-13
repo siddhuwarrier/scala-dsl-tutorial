@@ -11,12 +11,25 @@ trait SimpleMatcherDsl {
          throw new TestFailedException("Assertion failed")
        }
      }
+
+     def should(notKeyword: NotKeyword): NotKeywordResult = NotKeywordResult(leftOperand)
    }
 
   def equal(rightOperand: Any): Any => Boolean = {
       leftOperand:Any => {
         leftOperand equals rightOperand
       }
+  }
+
+  val not = new NotKeyword
+
+  sealed class NotKeyword
+  sealed case class NotKeywordResult(leftOperand: Any) {
+    def equal(rightOperand: Any): Unit = {
+      if (leftOperand equals rightOperand) {
+        throw new TestFailedException("Assertion failed")
+      }
+    }
   }
 }
 
