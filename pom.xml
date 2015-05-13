@@ -6,6 +6,7 @@
 
     <groupId>info.siddhuw</groupId>
     <artifactId>scala-dsl-tutorial</artifactId>
+    <packaging>jar</packaging>
     <version>0.1.0-SNAPSHOT</version>
 
     <properties>
@@ -75,7 +76,7 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
                 <configuration>
-                    <skipTests>true</skipTests>
+                    <testSourceDirectory>src/test/scala</testSourceDirectory>
                 </configuration>
             </plugin>
         </plugins>
