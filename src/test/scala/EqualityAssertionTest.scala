@@ -1,10 +1,6 @@
 import info.siddhuw.{TestFailedException, SimpleMatcherDsl}
 import org.junit.Test
 
-/**
- * Copyright (c) Cisco systems 2015. All rights reserved.
- * Date: 13/05/15
- */
 class EqualityAssertionTest extends SimpleMatcherDsl {
 
   sealed case class Person(name: String)
